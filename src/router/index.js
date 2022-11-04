@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import ListPages from "../components/ListPage"
+import ListPages from "../components/ListPage";
+import CRUDTable from "../components/CRUDTable";
 
 Vue.use(VueRouter);
 
@@ -14,12 +15,22 @@ const routes = [
       title: "500apps - Grow like the Fortune 500",
       icon: "",
     },
-  }
-]
+  },
+  {
+    path: "/crud",
+    name: "Table",
+    component: CRUDTable,
+    meta: {
+      auth: true,
+      title: "500apps - Grow like the Fortune 500",
+      icon: "",
+    },
+  },
+];
 // We set the history mode if normal or hashbang when we have index
 let router = null;
 router = new VueRouter({
-    routes,
-    mode: "history",
-  });
+  routes,
+  mode: "history",
+});
 export default router;
