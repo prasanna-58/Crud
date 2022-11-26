@@ -158,7 +158,7 @@
         var test = ["Prasanna", "Ramya"];
         var results = [];
         for (var i = 0; i < test.length; i++) {
-          for (var j = 0; j < test[i].split("").length; j++) {
+          for (var j = 0; j < test[i].length; j++) {
             if (!results.includes(test[i][j])) results.push(test[i][j]);
           }
         }
